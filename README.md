@@ -18,7 +18,7 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 
 ## 🔗 Live Demo
 
-Check it out live: **[YourPortfolioLiveLink.com](https://your-live-link.com)**
+Check it out live: **[PortfolioLiveLink.com](https://your-live-link.com)**
 
 ---
 
@@ -84,8 +84,8 @@ These helped me sharpen my skills in building real apps under tight deadlines an
 
 **Contact Me**
 Feel free to connect!
--*Email: vinaydonthigari@gmail.com
--*Phone: +91 9885195329
+-*Email: vinaydonthigari@gmail.com*
+-*Phone: +91 9885195329*
 
 ***Support & Feedback***
   If you find any bugs, or have suggestions to make it better, open an issue or send me a message. Always happy to improve.
