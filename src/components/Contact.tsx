@@ -80,8 +80,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'vinaykumaryadav.2112@gmail.com',
-      href: 'mailto:vinaykumaryadav.2112@gmail.com'
+      value: 'vinaydonthigari@gmail.com',
+      href: 'mailto:vinaydonthigari@gmail.com'
     },
     {
       icon: Phone,
@@ -133,24 +133,29 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6 flex-1">
-              {contactInfo.map(info => (
-                <a
-                  key={info.title}
-                  href={info.href}
-                  className="flex items-center space-x-4 p-4 rounded-lg bg-card hover:bg-secondary/50 transition-colors group"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <info.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-card-foreground">
-                      {info.title}
-                    </h4>
-                    <p className="text-muted-foreground">{info.value}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
+  {contactInfo.map(info => (
+    <a
+      key={info.title}
+      href={info.href}
+      className="flex items-center space-x-4 p-4 rounded-lg bg-card hover:bg-secondary/50 transition-colors group flex-wrap"
+    >
+      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+        <info.icon className="w-6 h-6 text-primary" />
+      </div>
+
+      {/* ✅ Text container now allows wrapping and responsive font sizes */}
+      <div className="min-w-0">
+        <h4 className="font-medium text-card-foreground text-sm sm:text-base">
+          {info.title}
+        </h4>
+        <p className="text-muted-foreground text-sm sm:text-base break-words">
+          {info.value}
+        </p>
+      </div>
+    </a>
+  ))}
+</div>
+
           </div>
 
           {/* Contact Form */}
