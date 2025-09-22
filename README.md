@@ -7,12 +7,12 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 ## 📚 Table of Contents
 
 - [Live Demo](https://vinaydonthigari-portfolio.netlify.app/)  
-- [What’s Inside](#-what’s-inside)  
-- [Features & Technologies](#-features--technologies)  
-- [Certifications & Hackathons](#-certifications--hackathons)  
-- [How to Run Locally](#-how-to-run-locally)  
-- [Contact Me](#-contact-me)  
-- [Support](#-support)  
+- [What’s Inside](https://vinaydonthigari-portfolio.netlify.app/)  
+- [Features & Technologies]([#-features--technologies](https://vinaydonthigari-portfolio.netlify.app/))  
+- [Certifications & Hackathons]([#-certifications--hackathon](https://vinaydonthigari-portfolio.netlify.app/))  
+- [How to Run Locally](https://vinaydonthigari-portfolio.netlify.app/)  
+- [Contact Me](https://vinaydonthigari-portfolio.netlify.app/)  
+- [Support](https://vinaydonthigari-portfolio.netlify.app/)  
 
 ---
 
@@ -87,7 +87,7 @@ Feel free to connect!
 -**Email: vinaydonthigari@gmail.com**  
 -**Phone: +91 9885195329**
 
-***Support & Feedback***
+**Support & Feedback**  
   If you find any bugs, or have suggestions to make it better, open an issue or send me a message. Always happy to improve.
 
   Thanks for visiting!  
