@@ -73,13 +73,13 @@ These helped me sharpen my skills in building real apps under tight deadlines an
    ```bash
    git clone https://github.com/donthigarivinay/portfolio.git
    cd portfolio
-2. Install dependencies
+2. Install dependencies  
     npm install
-3. Set up environment (if needed)
+3. Set up environment (if needed)  
     If using EmailJS, add your Service ID, Template ID, and Public Key in the contact form file.
-4. Run the dev server
+4. Run the dev server  
     npm run dev
-5. Build for production
+5. Build for production  
     npm run build
 
 **Contact Me**
