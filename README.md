@@ -6,7 +6,7 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 
 ## 📚 Table of Contents
 
-- [Live Demo](#-https://vinaydonthigari-portfolio.netlify.app/)  
+- [Live Demo](https://vinaydonthigari-portfolio.netlify.app/)  
 - [What’s Inside](#-what’s-inside)  
 - [Features & Technologies](#-features--technologies)  
 - [Certifications & Hackathons](#-certifications--hackathons)  
@@ -18,7 +18,7 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 
 ## 🔗 Live Demo
 
-Check it out live: **[PortfolioLiveLink.com]([https://your-live-link.com](https://vinaydonthigari-portfolio.netlify.app/))**
+Check it out live: **[PortfolioLiveLink.com]([[https://your-live-link.com](https://vinaydonthigari-portfolio.netlify.app/)])**
 
 ---
 
