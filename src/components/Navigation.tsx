@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface NavigationProps {
@@ -9,15 +9,17 @@ interface NavigationProps {
 
 const Navigation = ({ isDarkMode, toggleTheme }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState('home');
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'certifications', label: 'Certifications' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
   ];
 
+  // Highlight current section while scrolling
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
@@ -31,7 +33,6 @@ const Navigation = ({ isDarkMode, toggleTheme }: NavigationProps) => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -40,6 +41,7 @@ const Navigation = ({ isDarkMode, toggleTheme }: NavigationProps) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setMobileOpen(false); // close mobile menu after clicking a link
     }
   };
 
@@ -48,11 +50,14 @@ const Navigation = ({ isDarkMode, toggleTheme }: NavigationProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
-          <div className="font-bold text-xl text-primary">
+          <div
+            onClick={() => scrollToSection('home')}
+            className="font-bold text-xl text-primary cursor-pointer select-none"
+          >
             Vinay Donthigari
           </div>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -70,42 +75,73 @@ const Navigation = ({ isDarkMode, toggleTheme }: NavigationProps) => {
                 )}
               </button>
             ))}
+
+            {/* Theme Toggle */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="w-9 h-9 rounded-full hover:bg-secondary"
+            >
+              {isDarkMode ? (
+                <Sun className="h-4 w-4 text-primary" />
+              ) : (
+                <Moon className="h-4 w-4 text-primary" />
+              )}
+            </Button>
           </div>
 
-          {/* Theme Toggle */}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="w-9 h-9 rounded-full hover:bg-secondary"
-          >
-            {isDarkMode ? (
-              <Sun className="h-4 w-4 text-primary" />
-            ) : (
-              <Moon className="h-4 w-4 text-primary" />
-            )}
-          </Button>
+          {/* Mobile Hamburger */}
+          <div className="md:hidden flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="w-9 h-9 rounded-full hover:bg-secondary"
+            >
+              {isDarkMode ? (
+                <Sun className="h-5 w-5 text-primary" />
+              ) : (
+                <Moon className="h-5 w-5 text-primary" />
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="w-9 h-9 rounded-full hover:bg-secondary"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? (
+                <X className="h-6 w-6 text-primary" />
+              ) : (
+                <Menu className="h-6 w-6 text-primary" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div className="md:hidden px-4 pb-3">
-        <div className="flex flex-wrap justify-center gap-4">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-                activeSection === item.id
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:text-primary'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
+      {/* Mobile Dropdown Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-background border-t border-border">
+          <div className="flex flex-col items-center py-4 space-y-3">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`w-full max-w-xs text-center px-4 py-2 rounded-lg text-base font-medium transition-colors ${
+                  activeSection === item.id
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:bg-secondary hover:text-primary'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
