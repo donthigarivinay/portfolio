@@ -83,7 +83,7 @@ These helped me sharpen my skills in building real apps under tight deadlines an
     npm run build
 
 **Contact Me**
-Feel free to connect!
+Feel free to connect!  
 -**Email: vinaydonthigari@gmail.com**  
 -**Phone: +91 9885195329**
 
@@ -91,4 +91,4 @@ Feel free to connect!
   If you find any bugs, or have suggestions to make it better, open an issue or send me a message. Always happy to improve.
 
   Thanks for visiting!  
-  **Vinay**
+     **Vinay**
