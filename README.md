@@ -8,7 +8,7 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 
 - [Live Demo](https://vinaydonthigari-portfolio.netlify.app/)  
 - [What’s Inside](https://vinaydonthigari-portfolio.netlify.app/)  
-- [Features & Technologies]((https://vinaydonthigari-portfolio.netlify.app/))  
+- [Features & Technologies](https://vinaydonthigari-portfolio.netlify.app/)  
 - [Certifications & Hackathons](https://vinaydonthigari-portfolio.netlify.app/))  
 - [How to Run Locally](https://vinaydonthigari-portfolio.netlify.app/)  
 - [Contact Me](https://vinaydonthigari-portfolio.netlify.app/)  
