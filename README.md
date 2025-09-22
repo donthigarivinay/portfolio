@@ -18,8 +18,7 @@ Welcome to my **personal portfolio**! This site showcases my web development wor
 
 ## 🔗 Live Demo
 
-Check it out live: **[YourPortfolioLiveLink.com](https://your-live-link.com)**  
-*(Replace with your actual hosted domain)*
+Check it out live: **[YourPortfolioLiveLink.com](https://your-live-link.com)**
 
 ---
 
